@@ -8,14 +8,14 @@ const App = () => {
   const state = useSelector((state) => state);
   const click = () => {
     axios
-      .post("https://sign-up-backend.herokuapp.com/app/test44", {
-        input: inputRef,
+      .post("http://localhost:4000/app/test44", {
+        input: inputRef.current.value,
       })
       .then(() => console.log("post test179 dont"));
   };
   const get = () => {
     axios
-      .get("https://sign-up-backend.herokuapp.com/app/test33")
+      .get("http://localhost:4000/app/test33")
       .then((data) => console.log(data, "data getting"));
   };
 
